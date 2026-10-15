@@ -33,6 +33,7 @@ def head_extras():
 
 
 def page(name, title, desc, body, ld=None, noindex=False):
+    rel = "/" if noindex else ""  # 404 はどの住所でも出るので、先頭の「/」から書く
     url = f"{BASE}/" if name == "index.html" else f"{BASE}/{name}"
     ld_html = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
     stripe = "".join(f'<i style="background:{s["color"]}"></i>' for s in SITES)
@@ -50,27 +51,27 @@ def page(name, title, desc, body, ld=None, noindex=False):
 <meta property="og:url" content="{escape(url)}">
 <meta property="og:site_name" content="{escape(SITE)}">
 <meta name="theme-color" content="#1d2a2e">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="{rel}favicon.ico" sizes="48x48">
+<link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{rel}apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="{rel}assets/style.css">
 {head_extras()}
 {ld_html}
 </head>
 <body>
 <div class="stripe" aria-hidden="true">{stripe}</div>
 <header class="site-head">
-  <a class="brand" href="/"><img src="/favicon.svg" alt="" width="28" height="28">{escape(SITE)}</a>
-  <nav aria-label="メニュー"><a href="/#sites">サイト一覧</a><a href="/about.html">運営者情報</a></nav>
+  <a class="brand" href="{rel}index.html"><img src="{rel}favicon.svg" alt="" width="28" height="28">{escape(SITE)}</a>
+  <nav aria-label="メニュー"><a href="{rel}index.html#sites">サイト一覧</a><a href="{rel}about.html">運営者情報</a></nav>
 </header>
 {body}
 <footer class="site-foot">
   <nav aria-label="フッター">
-    <a href="/#sites">サイト一覧</a>
-    <a href="/about.html">運営者情報・プライバシーポリシー</a>
+    <a href="{rel}index.html#sites">サイト一覧</a>
+    <a href="{rel}about.html">運営者情報・プライバシーポリシー</a>
     <a href="{escape(config['contact'])}">お問い合わせ</a>
   </nav>
   {"".join(f"<p>{escape(n)}</p>" for n in config.get("notes", []))}
@@ -85,7 +86,7 @@ def page(name, title, desc, body, ld=None, noindex=False):
 def site_card(s):
     style = f'--cl:{s["color"]};--cd:{s["color_dark"]}'
     points = "".join(f"<li>{escape(p)}</li>" for p in s["points"])
-    head = f'<img src="/icons/{s["key"]}.svg" alt="" width="44" height="44"><div><h3>{escape(s["name"])}</h3><p class="exam">{escape(s["exam"])}</p></div>'
+    head = f'<img src="icons/{s["key"]}.svg" alt="" width="44" height="44"><div><h3>{escape(s["name"])}</h3><p class="exam">{escape(s["exam"])}</p></div>'
     if s["public"]:
         foot = f'<span class="count"><b>{s["terms"]}</b>語</span><span class="go">サイトを開く →</span>'
         return (f'<a class="card" href="{escape(s["url"])}" style="{style}"><div class="card-head">{head}</div>'
