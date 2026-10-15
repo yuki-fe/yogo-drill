@@ -1,0 +1,10 @@
+# 手元用の資料（公開しない）
+*.pdf
+notes/
+
+# Python や エディタが作るファイル
+__pycache__/
+.venv/
+.vscode/
+Thumbs.db
+desktop.ini

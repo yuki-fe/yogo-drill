@@ -1,0 +1,48 @@
+{
+  "site_name": "用語ドリル",
+  "tagline": "資格の用語を、すきま時間に覚える無料の単語帳",
+  "description": "基本情報技術者試験・ITパスポート・AWS 認定クラウドプラクティショナー・生成AIパスポート・G検定・国内旅行業務取扱管理者の用語を、カードと4択クイズで覚えられる無料の単語帳サイトの一覧です。登録不要で、スマホでも使えます。",
+  "base_url": "https://yogo-drill.com",
+  "operator": "Yuki-fe",
+  "contact": "https://forms.gle/s4yB1xMbcoRqZps2A",
+  "established": "2026-10-15",
+  "google_analytics_id": "",
+  "groups": [
+    {"key": "it", "name": "IT・情報処理"},
+    {"key": "ai", "name": "クラウド・AI"},
+    {"key": "travel", "name": "旅行"}
+  ],
+  "sites": [
+    {"key": "fe", "group": "it", "public": true, "name": "FE用語ドリル", "url": "https://fe.yogo-drill.com/",
+     "exam": "基本情報技術者試験", "terms": 345, "color": "#c0435a", "color_dark": "#ec7d91",
+     "desc": "科目Aの用語の単語帳に加えて、科目Bの擬似言語のプログラムを1行ずつ動かして、変数の変化を見ながらトレースの練習ができます。",
+     "points": ["科目Bのトレース練習", "穴埋め・アルゴリズム図鑑"]},
+    {"key": "ip", "group": "it", "public": true, "name": "ITパスポート用語ドリル", "url": "https://ip.yogo-drill.com/",
+     "exam": "ITパスポート試験", "terms": 665, "color": "#2d68a8", "color_dark": "#7db0ea",
+     "desc": "ストラテジ系・マネジメント系・テクノロジ系の用語を、分野ごとに覚えられます。法律や略語の用語も多く収録しています。",
+     "points": ["分野別ミニテスト", "略語クイズ"]},
+    {"key": "cloud", "group": "ai", "public": false, "name": "クラウド用語ドリル", "url": "https://cloud.yogo-drill.com/",
+     "exam": "AWS 認定クラウドプラクティショナー（CLF-C02）", "terms": 248, "color": "#1a6f7a", "color_dark": "#6cc3cf",
+     "desc": "クラウドの考え方、セキュリティ、主なサービス、料金とサポートの用語を、試験の4つの分野ごとに覚えられます。",
+     "points": ["分野別ミニテスト", "略語クイズ"]},
+    {"key": "genai", "group": "ai", "public": false, "name": "生成AI用語ドリル", "url": "https://genai.yogo-drill.com/",
+     "exam": "生成AIパスポート試験（2027年2月試験からの新シラバス）", "terms": 204, "color": "#5a3fb0", "color_dark": "#b7a4f0",
+     "desc": "AI の基礎から、生成AI・AI エージェントの仕組み、著作権や個人情報などのリスク、仕事での使い方まで、やさしい言葉で覚えられます。",
+     "points": ["章別ミニテスト", "略語クイズ"]},
+    {"key": "dl", "group": "ai", "public": false, "name": "ディープラーニング用語ドリル", "url": "https://dl.yogo-drill.com/",
+     "exam": "G検定（シラバス 2024）", "terms": 293, "color": "#9b2f7a", "color_dark": "#ec8fcd",
+     "desc": "AI の歴史、機械学習、ディープラーニングの技術と応用、統計、法律・倫理の用語を、数式を使わずに覚えられます。",
+     "points": ["分野別ミニテスト", "略語クイズ"]},
+    {"key": "travel", "group": "travel", "public": false, "name": "国内旅行業務用語ドリル", "url": "https://travel.yogo-drill.com/",
+     "exam": "国内旅行業務取扱管理者試験", "terms": 175, "color": "#9a4a1c", "color_dark": "#e9a77c",
+     "desc": "旅行業法・約款・国内旅行実務の用語と、試験に出る数字（日数・金額など）を覚えられます。",
+     "points": ["覚える数字の一覧", "分野別ミニテスト"]}
+  ],
+  "notes": [
+    "基本情報技術者試験・ITパスポート試験は、独立行政法人 情報処理推進機構（IPA）が実施する国家試験です。",
+    "Amazon Web Services、AWS、および関連する名称は、Amazon.com, Inc. またはその関連会社の商標です。",
+    "生成AIパスポートは一般社団法人生成AI活用普及協会（GUGA）が、G検定は一般社団法人日本ディープラーニング協会（JDLA）が実施する試験・検定です。",
+    "国内旅行業務取扱管理者試験は、一般社団法人 全国旅行業協会が実施する国家試験です。",
+    "このサイトと各学習サイトは個人が運営しており、上記の試験の実施団体・企業とは関係ありません。"
+  ]
+}
