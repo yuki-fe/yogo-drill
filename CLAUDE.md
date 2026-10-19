@@ -4,12 +4,12 @@
 
 ## プロジェクト概要
 
-独自ドメインのいちばん上 **https://yogo-drill.com/** に置く入り口のサイト「用語ドリル」。運営者 Yuki-fe の6つの学習サイト（fe・ip・cloud・genai・dl・travel の各サブドメイン）を紹介する。リポジトリ `yuki-fe/yogo-drill`（予定）の `main` の `/docs` を GitHub Pages で公開する。
+独自ドメインのいちばん上 **https://yogo-drill.com/** に置く入り口のサイト「用語ドリル」。運営者 Yuki-fe の学習サイト（fe・ip・cloud・genai・dl・boki・iryo の各サブドメイン）を紹介する。国内旅行業務用語ドリル（travel-drill）は一覧に載せない（2026-10-19 に運営者が決めた）。リポジトリ `yuki-fe/yogo-drill`（予定）の `main` の `/docs` を GitHub Pages で公開する。
 
 - ページは `index.html`（サイト一覧）・`about.html`（運営者情報・プライバシーポリシー）・`404.html` だけ。`sites.json` から `build.py` が作る
 - 公開したサイトは `sites.json` の `"public": true`。false のサイトは「準備中」と出し、リンクしない
 - 各サイトの色は、そのサイトの `--mark`（明るい画面）と、ダーク用の色。アイコンは各サイトの `favicon.svg` のコピー
-- 各サイトの元のフォルダ: デスクトップの `claude FE対策サイト`・`ip-drill`・`cloud-drill`・`genai-drill`・`dl-drill`・`travel-drill`
+- 各サイトの元のフォルダ: デスクトップの `claude FE対策サイト`・`ip-drill`・`cloud-drill`・`genai-drill`・`dl-drill`・`boki-drill`・`iryo-drill`
 
 ## 決まりごと
 
