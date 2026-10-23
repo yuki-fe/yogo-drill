@@ -61,7 +61,7 @@
     {
       "key": "cloud",
       "group": "ai",
-      "public": false,
+      "public": true,
       "name": "クラウド用語ドリル",
       "url": "https://cloud.yogo-drill.com/",
       "exam": "AWS 認定クラウドプラクティショナー（CLF-C02）",
@@ -77,7 +77,7 @@
     {
       "key": "genai",
       "group": "ai",
-      "public": false,
+      "public": true,
       "name": "生成AI用語ドリル",
       "url": "https://genai.yogo-drill.com/",
       "exam": "生成AIパスポート試験（2027年2月試験からの新シラバス）",
@@ -93,7 +93,7 @@
     {
       "key": "dl",
       "group": "ai",
-      "public": false,
+      "public": true,
       "name": "ディープラーニング用語ドリル",
       "url": "https://dl.yogo-drill.com/",
       "exam": "G検定（シラバス 2024）",
@@ -109,7 +109,7 @@
     {
       "key": "boki",
       "group": "biz",
-      "public": false,
+      "public": true,
       "name": "簿記用語ドリル",
       "url": "https://boki.yogo-drill.com/",
       "exam": "簿記検定3級・2級（2027年4月からの範囲）",
@@ -125,7 +125,7 @@
     {
       "key": "iryo",
       "group": "med",
-      "public": false,
+      "public": true,
       "name": "医療事務用語ドリル",
       "url": "https://iryo.yogo-drill.com/",
       "exam": "医療事務の仕事と資格の勉強",

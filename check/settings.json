@@ -1,0 +1,26 @@
+{
+  "_説明": "サイトの点検（check_sites.py）の決まり。点検するサイトは sites.json の public が true のものと、入り口のサイト",
+  "result_url": "https://github.com/yuki-fe/yogo-drill/blob/check-results/result.md",
+  "redirects": [
+    { "from": "https://yuki-fe.github.io/fe-drill/", "to": "https://fe.yogo-drill.com/", "site": "fe" },
+    { "from": "https://yuki-fe.github.io/ip-drill/", "to": "https://ip.yogo-drill.com/", "site": "ip" },
+    { "from": "https://www.yogo-drill.com/", "to": "https://yogo-drill.com/", "site": "top" }
+  ],
+  "hidden_sites": [
+    { "url": "https://travel.yogo-drill.com/", "name": "国内旅行業務用語ドリル", "words": ["travel.yogo-drill.com", "travel-drill", "国内旅行業務"] }
+  ],
+  "banned_words": {
+    "問題": ["必ず合格", "絶対合格", "絶対に合格", "合格保証", "合格を保証", "合格確実", "確実に合格", "100%合格", "誰でも合格", "ここだけ"],
+    "注意": ["公式", "一発合格", "最短合格"]
+  },
+  "brand_forbidden": {
+    "cloud": ["AWS", "Amazon"],
+    "dl": ["G検定"],
+    "boki": ["日商"],
+    "fe": ["IPA"],
+    "ip": ["IPA", "iパス"]
+  },
+  "footer_must_include": "関係",
+  "affiliate_hosts": ["amazon.co.jp", "amzn.to", "a8.net", "moshimo.com", "valuecommerce.com", "rakuten.co.jp", "afi-b.com", "accesstrade.net"],
+  "browser_pages_extra": 2
+}

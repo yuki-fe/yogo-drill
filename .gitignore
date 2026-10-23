@@ -8,3 +8,6 @@ __pycache__/
 .vscode/
 Thumbs.db
 desktop.ini
+
+# サイトの点検の結果（手元で動かしたとき）
+check/out/

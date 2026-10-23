@@ -1,0 +1,46 @@
+# サイトの点検: 毎週月曜の朝に、公開中の全サイトを点検する（check/check_sites.py）。
+# 結果（result.json・result.md）は check-results のブランチに置く（main には書かないので、Pull origin は増えない）。
+# LINE ボットが result.json を読んで、朝のレポートに【サイトの点検】の欄を出す。
+# 手で動かすとき: GitHub の「Actions」→「サイトの点検」→「Run workflow」
+name: サイトの点検
+
+on:
+  schedule:
+    - cron: "0 19 * * 0"   # 毎週月曜 4:00（日本時間）。GitHub が混んでいると少し遅れる
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: ブラウザの点検の準備
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: 点検する
+        run: python check/check_sites.py --out out
+
+      - name: 結果を check-results のブランチに置く
+        run: |
+          cd out
+          git init -q -b check-results
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "サイトの点検 $(TZ=Asia/Tokyo date +%F)"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" check-results
