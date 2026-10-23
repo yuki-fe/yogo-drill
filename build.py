@@ -37,6 +37,7 @@ def page(name, title, desc, body, ld=None, noindex=False):
     url = f"{BASE}/" if name == "index.html" else f"{BASE}/{name}"
     ld_html = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
     stripe = "".join(f'<i style="background:{s["color"]}"></i>' for s in SITES)
+    cur = ' aria-current="page"'   # 今いる場所のメニューに下線
     html = f"""<!doctype html>
 <html lang="ja">
 <head>
@@ -56,17 +57,24 @@ def page(name, title, desc, body, ld=None, noindex=False):
 <link rel="apple-touch-icon" href="{rel}apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
 <link rel="stylesheet" href="{rel}assets/style.css">
 {head_extras()}
 {ld_html}
 </head>
 <body>
+<a class="skip" href="#content">本文へ移動</a>
 <div class="stripe" aria-hidden="true">{stripe}</div>
 <header class="site-head">
-  <a class="brand" href="{rel}index.html"><img src="{rel}favicon.svg" alt="" width="28" height="28">{escape(SITE)}</a>
-  <nav aria-label="メニュー"><a href="{rel}index.html#sites">サイト一覧</a><a href="{rel}about.html">運営者情報</a></nav>
+  <div class="site-head-in">
+    <a class="brand" href="{rel}index.html"><img src="{rel}favicon.svg" alt="" width="28" height="28">{escape(SITE)}</a>
+    <nav class="site-nav" aria-label="メニュー">
+      <a href="{rel}index.html#sites"{cur if name == "index.html" else ""}>サイト一覧</a>
+      <a href="{rel}about.html"{cur if name == "about.html" else ""}>運営者情報</a>
+    </nav>
+  </div>
 </header>
+<div id="content"></div>
 {body}
 <footer class="site-foot">
   <nav aria-label="フッター">
@@ -104,22 +112,52 @@ def build_index():
         cards = [s for s in SITES if s["group"] == g["key"]]
         cards.sort(key=lambda s: not s["public"])
         if cards:
-            groups.append(f'<section class="group"><h2>{escape(g["name"])}</h2><div class="cards">{"".join(site_card(s) for s in cards)}</div></section>')
+            groups.append(f'<section class="group"><h3>{escape(g["name"])}</h3><div class="cards">{"".join(site_card(s) for s in cards)}</div></section>')
+    public = [s for s in SITES if s["public"]]
+    quick = "".join(f'<li><a href="{escape(s["url"])}" style="--cl:{s["color"]};--cd:{s["color_dark"]}">'
+                    f'<img src="icons/{s["key"]}.svg" alt="" width="36" height="36"><span><b>{escape(s["name"])}</b>'
+                    f'<small>{escape(s["exam"])}</small></span><em>{s["terms"]}語</em></a></li>' for s in public)
+    how = [
+        ("cards", "カード", "意味を読んで用語を思い出し、裏返して確かめる"),
+        ("check", "4択クイズ", "同じ分野のまぎらわしい用語から選ぶ"),
+        ("pencil", "書いて答える", "説明を読んで、用語を入力する"),
+        ("redo", "復習", "まちがえた用語だけを集めて解き直す"),
+    ]
+    how_html = "".join(f'<li>{icon(i)}<b>{t}</b><span>{d}</span></li>' for i, t, d in how)
     body = f"""
 <main>
-  <section class="hero">
-    <h1>{escape(SITE)}<small>{escape(config["tagline"])}</small></h1>
-    <p>資格の試験に出てくる用語を、カードと4択クイズで覚える単語帳のサイトです。どのサイトも<b>無料・登録不要</b>で、スマホでもパソコンでも使えます。いま{n_public}つのサイトで、あわせて{total}語の用語を公開しています。</p>
-    <ul class="features">
-      <li><b>カード</b>意味を読んで用語を思い出し、裏返して確かめる</li>
-      <li><b>4択クイズ</b>同じ分野のまぎらわしい用語から選ぶ</li>
-      <li><b>書いて答える</b>説明を読んで、用語を入力する</li>
-      <li><b>復習</b>まちがえた用語だけを集めて解き直す</li>
-    </ul>
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero-text">
+      <p class="hero-eyebrow">資格の用語の単語帳・無料・登録なし</p>
+      <h1 id="hero-h"><span>資格の用語を、</span><span>すきま時間に</span><span>覚える。</span></h1>
+      <p class="hero-lead">試験に出てくる用語を、カードと4択クイズで覚える単語帳のサイトです。どのサイトも無料・登録不要で、スマホでもパソコンでも使えます。</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#sites">サイトを選ぶ</a>
+        <a class="btn" href="#how">使い方を見る</a>
+      </div>
+      <ul class="hero-stats" aria-label="公開の数">
+        <li><b>{n_public}</b><span>サイト</span></li>
+        <li><b>{total:,}</b><span>用語</span></li>
+        <li><b>0円</b><span>登録なし</span></li>
+      </ul>
+    </div>
+    <aside class="quick" aria-labelledby="quick-h">
+      <h2 id="quick-h">{n_public}つのサイト</h2>
+      <ul>{quick}</ul>
+    </aside>
   </section>
-  <div id="sites">{"".join(groups)}</div>
-  <section class="prose">
-    <h2>このサイトについて</h2>
+
+  <section class="block" id="sites" aria-labelledby="sites-h">
+    <h2 id="sites-h" class="sec-title">サイトを選ぶ</h2>
+    {"".join(groups)}
+  </section>
+
+  <section class="block" id="how" aria-labelledby="how-h">
+    <h2 id="how-h" class="sec-title">どのサイトでも、同じ使い方</h2>
+    <ul class="how">{how_html}</ul>
+  </section>
+  <section class="prose about-block">
+    <h2 class="sec-title">このサイトについて</h2>
     <p>{escape(SITE)}は、個人で開発・運営している学習サイトの入り口です。用語の説明は、運営者が AI の支援を受けて作成し、内容を確認したうえで掲載しています。試験の範囲や日程などの最新の情報は、各試験の実施団体のサイトで確認してください。</p>
     <p>進み具合は、使っているブラウザの中にだけ保存されます。サイトごとに別々に記録されます。</p>
   </section>
@@ -132,6 +170,19 @@ def build_index():
          "itemListElement": [{"@type": "ListItem", "position": i, "name": s["name"], "url": s["url"]} for i, s in enumerate(public, 1)]},
     ]
     page("index.html", f"{SITE}｜{config['tagline']}", config["description"], body, ld)
+
+
+# 線のアイコン（Lucide の形をもとに、そのまま SVG で入れる。各サイトの build.py と同じ）
+ICONS = {
+    "cards": '<rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 2h12a2 2 0 0 1 2 2v12"/>',
+    "check": '<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>',
+    "pencil": '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',
+    "redo": '<path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/>',
+}
+
+
+def icon(name):
+    return f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{ICONS[name]}</svg>'
 
 
 def build_about():

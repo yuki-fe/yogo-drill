@@ -17,32 +17,58 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
 <link rel="stylesheet" href="assets/style.css">
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "用語ドリル", "url": "https://yogo-drill.com/", "description": "基本情報技術者試験・ITパスポート・AWS 認定クラウドプラクティショナー・生成AIパスポート・G検定・簿記検定3級・2級・医療事務の用語を、カードと4択クイズで覚えられる無料の単語帳サイトの一覧です。登録不要で、スマホでも使えます。"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "用語ドリルのサイト一覧", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "FE用語ドリル", "url": "https://fe.yogo-drill.com/"}, {"@type": "ListItem", "position": 2, "name": "ITパスポート用語ドリル", "url": "https://ip.yogo-drill.com/"}, {"@type": "ListItem", "position": 3, "name": "クラウド用語ドリル", "url": "https://cloud.yogo-drill.com/"}, {"@type": "ListItem", "position": 4, "name": "生成AI用語ドリル", "url": "https://genai.yogo-drill.com/"}, {"@type": "ListItem", "position": 5, "name": "ディープラーニング用語ドリル", "url": "https://dl.yogo-drill.com/"}, {"@type": "ListItem", "position": 6, "name": "簿記用語ドリル", "url": "https://boki.yogo-drill.com/"}, {"@type": "ListItem", "position": 7, "name": "医療事務用語ドリル", "url": "https://iryo.yogo-drill.com/"}]}</script>
 </head>
 <body>
+<a class="skip" href="#content">本文へ移動</a>
 <div class="stripe" aria-hidden="true"><i style="background:#c0435a"></i><i style="background:#2d68a8"></i><i style="background:#1a6f7a"></i><i style="background:#5a3fb0"></i><i style="background:#9b2f7a"></i><i style="background:#7a6a12"></i><i style="background:#0b6e99"></i></div>
 <header class="site-head">
-  <a class="brand" href="index.html"><img src="favicon.svg" alt="" width="28" height="28">用語ドリル</a>
-  <nav aria-label="メニュー"><a href="index.html#sites">サイト一覧</a><a href="about.html">運営者情報</a></nav>
+  <div class="site-head-in">
+    <a class="brand" href="index.html"><img src="favicon.svg" alt="" width="28" height="28">用語ドリル</a>
+    <nav class="site-nav" aria-label="メニュー">
+      <a href="index.html#sites" aria-current="page">サイト一覧</a>
+      <a href="about.html">運営者情報</a>
+    </nav>
+  </div>
 </header>
+<div id="content"></div>
 
 <main>
-  <section class="hero">
-    <h1>用語ドリル<small>資格の用語を、すきま時間に覚える無料の単語帳</small></h1>
-    <p>資格の試験に出てくる用語を、カードと4択クイズで覚える単語帳のサイトです。どのサイトも<b>無料・登録不要</b>で、スマホでもパソコンでも使えます。いま7つのサイトで、あわせて2233語の用語を公開しています。</p>
-    <ul class="features">
-      <li><b>カード</b>意味を読んで用語を思い出し、裏返して確かめる</li>
-      <li><b>4択クイズ</b>同じ分野のまぎらわしい用語から選ぶ</li>
-      <li><b>書いて答える</b>説明を読んで、用語を入力する</li>
-      <li><b>復習</b>まちがえた用語だけを集めて解き直す</li>
-    </ul>
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero-text">
+      <p class="hero-eyebrow">資格の用語の単語帳・無料・登録なし</p>
+      <h1 id="hero-h"><span>資格の用語を、</span><span>すきま時間に</span><span>覚える。</span></h1>
+      <p class="hero-lead">試験に出てくる用語を、カードと4択クイズで覚える単語帳のサイトです。どのサイトも無料・登録不要で、スマホでもパソコンでも使えます。</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#sites">サイトを選ぶ</a>
+        <a class="btn" href="#how">使い方を見る</a>
+      </div>
+      <ul class="hero-stats" aria-label="公開の数">
+        <li><b>7</b><span>サイト</span></li>
+        <li><b>2,233</b><span>用語</span></li>
+        <li><b>0円</b><span>登録なし</span></li>
+      </ul>
+    </div>
+    <aside class="quick" aria-labelledby="quick-h">
+      <h2 id="quick-h">7つのサイト</h2>
+      <ul><li><a href="https://fe.yogo-drill.com/" style="--cl:#c0435a;--cd:#ec7d91"><img src="icons/fe.svg" alt="" width="36" height="36"><span><b>FE用語ドリル</b><small>基本情報技術者試験</small></span><em>345語</em></a></li><li><a href="https://ip.yogo-drill.com/" style="--cl:#2d68a8;--cd:#7db0ea"><img src="icons/ip.svg" alt="" width="36" height="36"><span><b>ITパスポート用語ドリル</b><small>ITパスポート試験</small></span><em>665語</em></a></li><li><a href="https://cloud.yogo-drill.com/" style="--cl:#1a6f7a;--cd:#6cc3cf"><img src="icons/cloud.svg" alt="" width="36" height="36"><span><b>クラウド用語ドリル</b><small>AWS 認定クラウドプラクティショナー（CLF-C02）</small></span><em>248語</em></a></li><li><a href="https://genai.yogo-drill.com/" style="--cl:#5a3fb0;--cd:#b7a4f0"><img src="icons/genai.svg" alt="" width="36" height="36"><span><b>生成AI用語ドリル</b><small>生成AIパスポート試験（2027年2月試験からの新シラバス）</small></span><em>204語</em></a></li><li><a href="https://dl.yogo-drill.com/" style="--cl:#9b2f7a;--cd:#ec8fcd"><img src="icons/dl.svg" alt="" width="36" height="36"><span><b>ディープラーニング用語ドリル</b><small>G検定（シラバス 2024）</small></span><em>293語</em></a></li><li><a href="https://boki.yogo-drill.com/" style="--cl:#7a6a12;--cd:#e0c860"><img src="icons/boki.svg" alt="" width="36" height="36"><span><b>簿記用語ドリル</b><small>簿記検定3級・2級（2027年4月からの範囲）</small></span><em>300語</em></a></li><li><a href="https://iryo.yogo-drill.com/" style="--cl:#0b6e99;--cd:#6cc0e6"><img src="icons/iryo.svg" alt="" width="36" height="36"><span><b>医療事務用語ドリル</b><small>医療事務の仕事と資格の勉強</small></span><em>178語</em></a></li></ul>
+    </aside>
   </section>
-  <div id="sites"><section class="group"><h2>IT・情報処理</h2><div class="cards"><a class="card" href="https://fe.yogo-drill.com/" style="--cl:#c0435a;--cd:#ec7d91"><div class="card-head"><img src="icons/fe.svg" alt="" width="44" height="44"><div><h3>FE用語ドリル</h3><p class="exam">基本情報技術者試験</p></div></div><p class="desc">科目Aの用語の単語帳に加えて、科目Bの擬似言語のプログラムを1行ずつ動かして、変数の変化を見ながらトレースの練習ができます。</p><ul class="points"><li>科目Bのトレース練習</li><li>穴埋め・アルゴリズム図鑑</li></ul><div class="card-foot"><span class="count"><b>345</b>語</span><span class="go">サイトを開く →</span></div></a><a class="card" href="https://ip.yogo-drill.com/" style="--cl:#2d68a8;--cd:#7db0ea"><div class="card-head"><img src="icons/ip.svg" alt="" width="44" height="44"><div><h3>ITパスポート用語ドリル</h3><p class="exam">ITパスポート試験</p></div></div><p class="desc">ストラテジ系・マネジメント系・テクノロジ系の用語を、分野ごとに覚えられます。法律や略語の用語も多く収録しています。</p><ul class="points"><li>分野別ミニテスト</li><li>略語クイズ</li></ul><div class="card-foot"><span class="count"><b>665</b>語</span><span class="go">サイトを開く →</span></div></a></div></section><section class="group"><h2>クラウド・AI</h2><div class="cards"><a class="card" href="https://cloud.yogo-drill.com/" style="--cl:#1a6f7a;--cd:#6cc3cf"><div class="card-head"><img src="icons/cloud.svg" alt="" width="44" height="44"><div><h3>クラウド用語ドリル</h3><p class="exam">AWS 認定クラウドプラクティショナー（CLF-C02）</p></div></div><p class="desc">クラウドの考え方、セキュリティ、主なサービス、料金とサポートの用語を、試験の4つの分野ごとに覚えられます。</p><ul class="points"><li>分野別ミニテスト</li><li>略語クイズ</li></ul><div class="card-foot"><span class="count"><b>248</b>語</span><span class="go">サイトを開く →</span></div></a><a class="card" href="https://genai.yogo-drill.com/" style="--cl:#5a3fb0;--cd:#b7a4f0"><div class="card-head"><img src="icons/genai.svg" alt="" width="44" height="44"><div><h3>生成AI用語ドリル</h3><p class="exam">生成AIパスポート試験（2027年2月試験からの新シラバス）</p></div></div><p class="desc">AI の基礎から、生成AI・AI エージェントの仕組み、著作権や個人情報などのリスク、仕事での使い方まで、やさしい言葉で覚えられます。</p><ul class="points"><li>章別ミニテスト</li><li>略語クイズ</li></ul><div class="card-foot"><span class="count"><b>204</b>語</span><span class="go">サイトを開く →</span></div></a><a class="card" href="https://dl.yogo-drill.com/" style="--cl:#9b2f7a;--cd:#ec8fcd"><div class="card-head"><img src="icons/dl.svg" alt="" width="44" height="44"><div><h3>ディープラーニング用語ドリル</h3><p class="exam">G検定（シラバス 2024）</p></div></div><p class="desc">AI の歴史、機械学習、ディープラーニングの技術と応用、統計、法律・倫理の用語を、数式を使わずに覚えられます。</p><ul class="points"><li>分野別ミニテスト</li><li>略語クイズ</li></ul><div class="card-foot"><span class="count"><b>293</b>語</span><span class="go">サイトを開く →</span></div></a></div></section><section class="group"><h2>ビジネス・会計</h2><div class="cards"><a class="card" href="https://boki.yogo-drill.com/" style="--cl:#7a6a12;--cd:#e0c860"><div class="card-head"><img src="icons/boki.svg" alt="" width="44" height="44"><div><h3>簿記用語ドリル</h3><p class="exam">簿記検定3級・2級（2027年4月からの範囲）</p></div></div><p class="desc">3級の簿記の基本から決算まで、2級の商業簿記（有価証券・リース・連結など）と工業簿記（原価計算）の勘定科目と用語を覚えられます。</p><ul class="points"><li>勘定科目の分類クイズ</li><li>分野別ミニテスト</li></ul><div class="card-foot"><span class="count"><b>300</b>語</span><span class="go">サイトを開く →</span></div></a></div></section><section class="group"><h2>医療事務</h2><div class="cards"><a class="card" href="https://iryo.yogo-drill.com/" style="--cl:#0b6e99;--cd:#6cc0e6"><div class="card-head"><img src="icons/iryo.svg" alt="" width="44" height="44"><div><h3>医療事務用語ドリル</h3><p class="exam">医療事務の仕事と資格の勉強</p></div></div><p class="desc">医療保険・公費負担医療・診療報酬・レセプトのしくみと、医学の基礎・カルテの略語を覚えられます。</p><ul class="points"><li>カルテの略語クイズ</li><li>分野別ミニテスト</li></ul><div class="card-foot"><span class="count"><b>178</b>語</span><span class="go">サイトを開く →</span></div></a></div></section></div>
-  <section class="prose">
-    <h2>このサイトについて</h2>
+
+  <section class="block" id="sites" aria-labelledby="sites-h">
+    <h2 id="sites-h" class="sec-title">サイトを選ぶ</h2>
+    <section class="group"><h3>IT・情報処理</h3><div class="cards"><a class="card" href="https://fe.yogo-drill.com/" style="--cl:#c0435a;--cd:#ec7d91"><div class="card-head"><img src="icons/fe.svg" alt="" width="44" height="44"><div><h3>FE用語ドリル</h3><p class="exam">基本情報技術者試験</p></div></div><p class="desc">科目Aの用語の単語帳に加えて、科目Bの擬似言語のプログラムを1行ずつ動かして、変数の変化を見ながらトレースの練習ができます。</p><ul class="points"><li>科目Bのトレース練習</li><li>穴埋め・アルゴリズム図鑑</li></ul><div class="card-foot"><span class="count"><b>345</b>語</span><span class="go">サイトを開く →</span></div></a><a class="card" href="https://ip.yogo-drill.com/" style="--cl:#2d68a8;--cd:#7db0ea"><div class="card-head"><img src="icons/ip.svg" alt="" width="44" height="44"><div><h3>ITパスポート用語ドリル</h3><p class="exam">ITパスポート試験</p></div></div><p class="desc">ストラテジ系・マネジメント系・テクノロジ系の用語を、分野ごとに覚えられます。法律や略語の用語も多く収録しています。</p><ul class="points"><li>分野別ミニテスト</li><li>略語クイズ</li></ul><div class="card-foot"><span class="count"><b>665</b>語</span><span class="go">サイトを開く →</span></div></a></div></section><section class="group"><h3>クラウド・AI</h3><div class="cards"><a class="card" href="https://cloud.yogo-drill.com/" style="--cl:#1a6f7a;--cd:#6cc3cf"><div class="card-head"><img src="icons/cloud.svg" alt="" width="44" height="44"><div><h3>クラウド用語ドリル</h3><p class="exam">AWS 認定クラウドプラクティショナー（CLF-C02）</p></div></div><p class="desc">クラウドの考え方、セキュリティ、主なサービス、料金とサポートの用語を、試験の4つの分野ごとに覚えられます。</p><ul class="points"><li>分野別ミニテスト</li><li>略語クイズ</li></ul><div class="card-foot"><span class="count"><b>248</b>語</span><span class="go">サイトを開く →</span></div></a><a class="card" href="https://genai.yogo-drill.com/" style="--cl:#5a3fb0;--cd:#b7a4f0"><div class="card-head"><img src="icons/genai.svg" alt="" width="44" height="44"><div><h3>生成AI用語ドリル</h3><p class="exam">生成AIパスポート試験（2027年2月試験からの新シラバス）</p></div></div><p class="desc">AI の基礎から、生成AI・AI エージェントの仕組み、著作権や個人情報などのリスク、仕事での使い方まで、やさしい言葉で覚えられます。</p><ul class="points"><li>章別ミニテスト</li><li>略語クイズ</li></ul><div class="card-foot"><span class="count"><b>204</b>語</span><span class="go">サイトを開く →</span></div></a><a class="card" href="https://dl.yogo-drill.com/" style="--cl:#9b2f7a;--cd:#ec8fcd"><div class="card-head"><img src="icons/dl.svg" alt="" width="44" height="44"><div><h3>ディープラーニング用語ドリル</h3><p class="exam">G検定（シラバス 2024）</p></div></div><p class="desc">AI の歴史、機械学習、ディープラーニングの技術と応用、統計、法律・倫理の用語を、数式を使わずに覚えられます。</p><ul class="points"><li>分野別ミニテスト</li><li>略語クイズ</li></ul><div class="card-foot"><span class="count"><b>293</b>語</span><span class="go">サイトを開く →</span></div></a></div></section><section class="group"><h3>ビジネス・会計</h3><div class="cards"><a class="card" href="https://boki.yogo-drill.com/" style="--cl:#7a6a12;--cd:#e0c860"><div class="card-head"><img src="icons/boki.svg" alt="" width="44" height="44"><div><h3>簿記用語ドリル</h3><p class="exam">簿記検定3級・2級（2027年4月からの範囲）</p></div></div><p class="desc">3級の簿記の基本から決算まで、2級の商業簿記（有価証券・リース・連結など）と工業簿記（原価計算）の勘定科目と用語を覚えられます。</p><ul class="points"><li>勘定科目の分類クイズ</li><li>分野別ミニテスト</li></ul><div class="card-foot"><span class="count"><b>300</b>語</span><span class="go">サイトを開く →</span></div></a></div></section><section class="group"><h3>医療事務</h3><div class="cards"><a class="card" href="https://iryo.yogo-drill.com/" style="--cl:#0b6e99;--cd:#6cc0e6"><div class="card-head"><img src="icons/iryo.svg" alt="" width="44" height="44"><div><h3>医療事務用語ドリル</h3><p class="exam">医療事務の仕事と資格の勉強</p></div></div><p class="desc">医療保険・公費負担医療・診療報酬・レセプトのしくみと、医学の基礎・カルテの略語を覚えられます。</p><ul class="points"><li>カルテの略語クイズ</li><li>分野別ミニテスト</li></ul><div class="card-foot"><span class="count"><b>178</b>語</span><span class="go">サイトを開く →</span></div></a></div></section>
+  </section>
+
+  <section class="block" id="how" aria-labelledby="how-h">
+    <h2 id="how-h" class="sec-title">どのサイトでも、同じ使い方</h2>
+    <ul class="how"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 2h12a2 2 0 0 1 2 2v12"/></svg><b>カード</b><span>意味を読んで用語を思い出し、裏返して確かめる</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><b>4択クイズ</b><span>同じ分野のまぎらわしい用語から選ぶ</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><b>書いて答える</b><span>説明を読んで、用語を入力する</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg><b>復習</b><span>まちがえた用語だけを集めて解き直す</span></li></ul>
+  </section>
+  <section class="prose about-block">
+    <h2 class="sec-title">このサイトについて</h2>
     <p>用語ドリルは、個人で開発・運営している学習サイトの入り口です。用語の説明は、運営者が AI の支援を受けて作成し、内容を確認したうえで掲載しています。試験の範囲や日程などの最新の情報は、各試験の実施団体のサイトで確認してください。</p>
     <p>進み具合は、使っているブラウザの中にだけ保存されます。サイトごとに別々に記録されます。</p>
   </section>
