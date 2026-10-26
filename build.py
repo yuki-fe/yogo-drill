@@ -51,6 +51,10 @@ def page(name, title, desc, body, ld=None, noindex=False):
 <meta property="og:description" content="{escape(desc)}">
 <meta property="og:url" content="{escape(url)}">
 <meta property="og:site_name" content="{escape(SITE)}">
+<meta property="og:image" content="{BASE}/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1d2a2e">
 <link rel="icon" href="{rel}favicon.ico" sizes="48x48">
 <link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
