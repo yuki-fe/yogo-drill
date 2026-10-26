@@ -1,7 +1,11 @@
 {
   "site_name": "用語ドリル",
   "tagline": "資格の用語を、すきま時間に覚える無料の単語帳",
-  "description": "基本情報技術者試験・ITパスポート・AWS 認定クラウドプラクティショナー・生成AIパスポート・G検定・簿記検定3級・2級・医療事務の用語を、カードと4択クイズで覚えられる無料の単語帳サイトの一覧です。登録不要で、スマホでも使えます。",
+  "sns": [
+    {"name": "Instagram", "url": "https://www.instagram.com/it_senpai_lab"},
+    {"name": "YouTube", "url": "https://www.youtube.com/@it_senpai_lab"}
+  ],
+  "description": "基本情報技術者試験・ITパスポート・AWS 認定クラウドプラクティショナー・生成AIパスポート・G検定・簿記検定3級・2級・医療事務の用語を、カード・4択クイズ・タイピングで覚えられる無料の単語帳サイトの一覧です。登録不要で、スマホでも使えます。",
   "base_url": "https://yogo-drill.com",
   "operator": "Yuki-fe",
   "contact": "https://forms.gle/s4yB1xMbcoRqZps2A",

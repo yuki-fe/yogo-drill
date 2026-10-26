@@ -81,6 +81,7 @@ def page(name, title, desc, body, ld=None, noindex=False):
     <a href="{rel}index.html#sites">サイト一覧</a>
     <a href="{rel}about.html">運営者情報・プライバシーポリシー</a>
     <a href="{escape(config['contact'])}">お問い合わせ</a>
+    {"".join(f'<a href="{escape(x["url"])}" rel="noopener">{escape(x["name"])}</a>' for x in config.get("sns", []))}
   </nav>
   {"".join(f"<p>{escape(n)}</p>" for n in config.get("notes", []))}
   <p>© {date.today().year} {escape(config["operator"])}</p>
@@ -121,6 +122,7 @@ def build_index():
         ("cards", "カード", "意味を読んで用語を思い出し、裏返して確かめる"),
         ("check", "4択クイズ", "同じ分野のまぎらわしい用語から選ぶ"),
         ("pencil", "書いて答える", "説明を読んで、用語を入力する"),
+        ("keyboard", "用語タイピング", "用語と意味をキーボードで打って、手で覚える"),
         ("redo", "復習", "まちがえた用語だけを集めて解き直す"),
     ]
     how_html = "".join(f'<li>{icon(i)}<b>{t}</b><span>{d}</span></li>' for i, t, d in how)
@@ -130,7 +132,7 @@ def build_index():
     <div class="hero-text">
       <p class="hero-eyebrow">資格の用語の単語帳・無料・登録なし</p>
       <h1 id="hero-h"><span>資格の用語を、</span><span>すきま時間に</span><span>覚える。</span></h1>
-      <p class="hero-lead">試験に出てくる用語を、カードと4択クイズで覚える単語帳のサイトです。どのサイトも無料・登録不要で、スマホでもパソコンでも使えます。</p>
+      <p class="hero-lead">試験に出てくる用語を、カード・4択クイズ・タイピングで覚える単語帳のサイトです。どのサイトも無料・登録不要で、スマホでもパソコンでも使えます。</p>
       <div class="hero-cta">
         <a class="btn primary" href="#sites">サイトを選ぶ</a>
         <a class="btn" href="#how">使い方を見る</a>
@@ -160,6 +162,7 @@ def build_index():
     <h2 class="sec-title">このサイトについて</h2>
     <p>{escape(SITE)}は、個人で開発・運営している学習サイトの入り口です。用語の説明は、運営者が AI の支援を受けて作成し、内容を確認したうえで掲載しています。試験の範囲や日程などの最新の情報は、各試験の実施団体のサイトで確認してください。</p>
     <p>進み具合は、使っているブラウザの中にだけ保存されます。サイトごとに別々に記録されます。</p>
+    <p>IT の知識やサイトの新しい機能は、{"・".join(f'<a href="{escape(x["url"])}" rel="noopener">{escape(x["name"])}</a>' for x in config.get("sns", []))}でも発信しています。</p>
   </section>
 </main>
 """
@@ -177,6 +180,7 @@ ICONS = {
     "cards": '<rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 2h12a2 2 0 0 1 2 2v12"/>',
     "check": '<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>',
     "pencil": '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',
+    "keyboard": '<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/>',
     "redo": '<path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/>',
 }
 
