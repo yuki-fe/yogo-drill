@@ -1,0 +1,19 @@
+{
+  "_説明": "試験の変更の見張り（watch_exams.py）が毎朝見に行く、試験の主催者などのページ。sites は sites.json の key（LINE とカレンダーに出すサイトの名前）。mode: text＝本文の行が変わったら知らせる / links＝リンク（keywords を含むものだけ）が増えた・消えたら知らせる。ignore は本文の行のうち無視するもの（正規表現。日付だけ変わる行など）",
+  "result_url": "https://github.com/yuki-fe/yogo-drill/blob/watch-results/watch.md",
+  "pages": [
+    { "id": "ipa-minaoshi", "sites": ["fe", "ip"], "name": "IPA 試験制度の見直しについて", "url": "https://www.ipa.go.jp/shiken/minaoshi/index.html", "mode": "text" },
+    { "id": "ipa-syllabus", "sites": ["fe", "ip"], "name": "IPA 出題範囲・シラバス等の改訂関連情報", "url": "https://www.ipa.go.jp/shiken/syllabus/henkou/index.html", "mode": "text" },
+    { "id": "ipa-syllabus-2026", "sites": ["fe", "ip"], "name": "IPA 新試験制度のシラバスについて", "url": "https://www.ipa.go.jp/shiken/syllabus/henkou/2026/20260630.html", "mode": "text" },
+    { "id": "ipa-fe", "sites": ["fe"], "name": "IPA 基本情報技術者試験", "url": "https://www.ipa.go.jp/shiken/kubun/fe.html", "mode": "text" },
+    { "id": "ipa-ip", "sites": ["ip"], "name": "IPA ITパスポート試験", "url": "https://www.ipa.go.jp/shiken/kubun/ip.html", "mode": "text" },
+    { "id": "aws-clf", "sites": ["cloud"], "name": "AWS Certified Cloud Practitioner", "url": "https://aws.amazon.com/jp/certification/certified-cloud-practitioner/", "mode": "links",
+      "keywords": ["ガイド", "guide", "Guide", "C02", "C03", "pdf", "PDF"] },
+    { "id": "guga-genai", "sites": ["genai"], "name": "生成AIパスポート（GUGA）", "url": "https://guga.or.jp/generativeaiexam/", "mode": "text" },
+    { "id": "jdla-g", "sites": ["dl"], "name": "JDLA ジェネラリスト検定", "url": "https://www.jdla.org/certificate/general/", "mode": "text" },
+    { "id": "kentei-boki", "sites": ["boki"], "name": "商工会議所 簿記", "url": "https://www.kentei.ne.jp/bookkeeping", "mode": "text" },
+    { "id": "kentei-boki3", "sites": ["boki"], "name": "商工会議所 簿記 3級", "url": "https://www.kentei.ne.jp/bookkeeping/class3", "mode": "text" },
+    { "id": "kentei-boki2", "sites": ["boki"], "name": "商工会議所 簿記 2級", "url": "https://www.kentei.ne.jp/bookkeeping/class2", "mode": "text" },
+    { "id": "mhlw-shinryo-r8", "sites": ["iryo"], "name": "厚生労働省 令和8年度診療報酬改定", "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000188411_00074.html", "mode": "text" }
+  ]
+}

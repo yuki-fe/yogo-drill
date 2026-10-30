@@ -1,0 +1,46 @@
+# 試験の変更の見張り: 毎朝、試験の主催者などのページ（check/watch.json）を見て、前の日と変わったところを書き出す（check/watch_exams.py）。
+# 結果（watch.json・watch.md・state.json）は watch-results のブランチに置く（main には書かないので、Pull origin は増えない）。
+# LINE ボットが watch.json を読んで、朝のレポートに【試験の変更】の欄を出し、Google カレンダーに「見直す」予定を入れる。
+# 手で動かすとき: GitHub の「Actions」→「試験の変更の見張り」→「Run workflow」
+name: 試験の変更の見張り
+
+on:
+  schedule:
+    - cron: "0 20 * * *"   # 毎朝 5:00（日本時間）。GitHub が混んでいると少し遅れる
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: exam-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 前の日の記録を取ってくる
+        run: |
+          git fetch -q origin watch-results || true
+          git show FETCH_HEAD:state.json > prev.json 2>/dev/null || echo "{}" > prev.json
+
+      - name: 見に行く
+        run: python check/watch_exams.py --prev prev.json --out out
+
+      - name: 結果を watch-results のブランチに置く
+        run: |
+          cd out
+          git init -q -b watch-results
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "試験の変更の見張り $(TZ=Asia/Tokyo date +%F)"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" watch-results
