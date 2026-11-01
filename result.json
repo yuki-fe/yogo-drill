@@ -1,0 +1,102 @@
+{
+ "checked_at": "2026-11-02T04:28:36+09:00",
+ "seconds": 222,
+ "browser": true,
+ "result_url": "https://github.com/yuki-fe/yogo-drill/blob/check-results/result.md",
+ "summary": {
+  "sites": 8,
+  "pages": 2300,
+  "problems": 0,
+  "warnings": 0,
+  "infos": 1
+ },
+ "sites": [
+  {
+   "key": "top",
+   "name": "用語ドリル（入り口）",
+   "url": "https://yogo-drill.com/",
+   "pages": 2,
+   "problems": 0,
+   "warnings": 0,
+   "items": [
+    {
+     "level": "情報",
+     "kind": "アクセス解析なし",
+     "page": "https://yogo-drill.com/",
+     "detail": "GA4 の測定 ID が入っていない"
+    }
+   ],
+   "more": 0
+  },
+  {
+   "key": "fe",
+   "name": "FE用語ドリル",
+   "url": "https://fe.yogo-drill.com/",
+   "pages": 368,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  },
+  {
+   "key": "ip",
+   "name": "ITパスポート用語ドリル",
+   "url": "https://ip.yogo-drill.com/",
+   "pages": 672,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  },
+  {
+   "key": "cloud",
+   "name": "クラウド用語ドリル",
+   "url": "https://cloud.yogo-drill.com/",
+   "pages": 255,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  },
+  {
+   "key": "genai",
+   "name": "生成AI用語ドリル",
+   "url": "https://genai.yogo-drill.com/",
+   "pages": 211,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  },
+  {
+   "key": "dl",
+   "name": "ディープラーニング用語ドリル",
+   "url": "https://dl.yogo-drill.com/",
+   "pages": 300,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  },
+  {
+   "key": "boki",
+   "name": "簿記用語ドリル",
+   "url": "https://boki.yogo-drill.com/",
+   "pages": 307,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  },
+  {
+   "key": "iryo",
+   "name": "医療事務用語ドリル",
+   "url": "https://iryo.yogo-drill.com/",
+   "pages": 185,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  }
+ ]
+}
