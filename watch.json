@@ -1,0 +1,85 @@
+{
+ "checked_at": "2026-11-02T05:25:28+09:00",
+ "result_url": "https://github.com/yuki-fe/yogo-drill/blob/watch-results/watch.md",
+ "pages": 12,
+ "changes": [
+  {
+   "id": "mhlw-shinryo-r8",
+   "name": "厚生労働省 令和8年度診療報酬改定",
+   "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000188411_00074.html",
+   "sites": [
+    "iryo"
+   ],
+   "site_names": [
+    "医療事務用語ドリル"
+   ],
+   "found_at": "2026-10-31T05:28:29+09:00",
+   "added": [
+    "令和８ 年10 月30 日",
+    "保医発10 3 0 第１ 号",
+    "PDF［319KB］",
+    "令和８年10 月30 日",
+    "PDF［166KB］",
+    "保医発1030 第２号",
+    "PDF［372KB］",
+    "PDF［74KB］"
+   ],
+   "removed": [],
+   "added_n": 8,
+   "removed_n": 0
+  },
+  {
+   "id": "ipa-syllabus-2026",
+   "name": "IPA 新試験制度のシラバスについて",
+   "url": "https://www.ipa.go.jp/shiken/syllabus/henkou/2026/20260630.html",
+   "sites": [
+    "fe",
+    "ip"
+   ],
+   "site_names": [
+    "FE用語ドリル",
+    "ITパスポート用語ドリル"
+   ],
+   "found_at": "2026-10-31T05:28:29+09:00",
+   "added": [
+    "最終更新日：2026年10月30日",
+    "プロフェッショナルデジタルスキル（データ・AI）試験（仮称） シラバス案 Ver.0.1(PDF:2.0 MB)",
+    "（2026年10月30日掲載）",
+    "2026年10月30日",
+    "プロフェッショナルデジタルスキル（データ・AI）試験（仮称）のシラバス案を掲載しました。"
+   ],
+   "removed": [
+    "最終更新日：2026年9月30日",
+    "準備が整ったものから順次このページに掲載し、2026年度夏頃を目途に一通り掲載する予定です。",
+    "準備中"
+   ],
+   "added_n": 5,
+   "removed_n": 3
+  },
+  {
+   "id": "ipa-minaoshi",
+   "name": "IPA 試験制度の見直しについて",
+   "url": "https://www.ipa.go.jp/shiken/minaoshi/index.html",
+   "sites": [
+    "fe",
+    "ip"
+   ],
+   "site_names": [
+    "FE用語ドリル",
+    "ITパスポート用語ドリル"
+   ],
+   "found_at": "2026-10-31T05:28:29+09:00",
+   "added": [
+    "（2026年6月22日掲載、2026年10月30日更新）",
+    "（2026年6月30日掲載、2026年10月30日更新）"
+   ],
+   "removed": [
+    "（2026年6月22日掲載、2026年8月31日更新）",
+    "（2026年6月30日掲載、2026年9月30日更新）"
+   ],
+   "added_n": 2,
+   "removed_n": 2
+  }
+ ],
+ "errors": []
+}
