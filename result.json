@@ -1,0 +1,140 @@
+{
+ "checked_at": "2026-11-09T04:30:16+09:00",
+ "seconds": 432,
+ "browser": true,
+ "result_url": "https://github.com/yuki-fe/yogo-drill/blob/check-results/result.md",
+ "summary": {
+  "sites": 8,
+  "pages": 2412,
+  "problems": 0,
+  "warnings": 6,
+  "infos": 1
+ },
+ "sites": [
+  {
+   "key": "top",
+   "name": "用語ドリル（入り口）",
+   "url": "https://yogo-drill.com/",
+   "pages": 2,
+   "problems": 0,
+   "warnings": 0,
+   "items": [
+    {
+     "level": "情報",
+     "kind": "アクセス解析なし",
+     "page": "https://yogo-drill.com/",
+     "detail": "GA4 の測定 ID が入っていない"
+    }
+   ],
+   "more": 0
+  },
+  {
+   "key": "fe",
+   "name": "FE用語ドリル",
+   "url": "https://fe.yogo-drill.com/",
+   "pages": 384,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  },
+  {
+   "key": "ip",
+   "name": "ITパスポート用語ドリル",
+   "url": "https://ip.yogo-drill.com/",
+   "pages": 688,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  },
+  {
+   "key": "cloud",
+   "name": "クラウド用語ドリル",
+   "url": "https://cloud.yogo-drill.com/",
+   "pages": 271,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  },
+  {
+   "key": "genai",
+   "name": "生成AI用語ドリル",
+   "url": "https://genai.yogo-drill.com/",
+   "pages": 227,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  },
+  {
+   "key": "dl",
+   "name": "ディープラーニング用語ドリル",
+   "url": "https://dl.yogo-drill.com/",
+   "pages": 316,
+   "problems": 0,
+   "warnings": 4,
+   "items": [
+    {
+     "level": "注意",
+     "kind": "使わない言葉「公式」",
+     "page": "https://dl.yogo-drill.com/terms/0209.html",
+     "detail": "…とを大きく忘れてしまう現象。【覚え方】新しい公式ばかり勉強していたら、前に覚えた公式を忘れて…"
+    },
+    {
+     "level": "注意",
+     "kind": "使わない言葉「公式」",
+     "page": "https://dl.yogo-drill.com/terms/0209.html",
+     "detail": "…】新しい公式ばかり勉強していたら、前に覚えた公式を忘れてしまった、という状態です。新しいタス…"
+    },
+    {
+     "level": "注意",
+     "kind": "使わない言葉「公式」",
+     "page": "https://dl.yogo-drill.com/terms/0209.html",
+     "detail": "…練習 書いて答える問題に挑戦 覚え方 新しい公式ばかり勉強していたら、前に覚えた公式を忘れて…"
+    },
+    {
+     "level": "注意",
+     "kind": "使わない言葉「公式」",
+     "page": "https://dl.yogo-drill.com/terms/0209.html",
+     "detail": "…新しい公式ばかり勉強していたら、前に覚えた公式を忘れてしまった、という状態です。新しいタス…"
+    }
+   ],
+   "more": 0
+  },
+  {
+   "key": "boki",
+   "name": "簿記用語ドリル",
+   "url": "https://boki.yogo-drill.com/",
+   "pages": 323,
+   "problems": 0,
+   "warnings": 2,
+   "items": [
+    {
+     "level": "注意",
+     "kind": "使わない言葉「公式」",
+     "page": "https://boki.yogo-drill.com/terms/0267.html",
+     "detail": "…」によるずれと覚えます。 試験での出され方 公式法変動予算では、予算差異＝実際の操業度での予…"
+    },
+    {
+     "level": "注意",
+     "kind": "使わない言葉「公式」",
+     "page": "https://boki.yogo-drill.com/terms/0268.html",
+     "detail": "…算も変える」と覚えます。 試験での出され方 公式法変動予算では、予算許容額＝変動費率×実際の…"
+    }
+   ],
+   "more": 0
+  },
+  {
+   "key": "iryo",
+   "name": "医療事務用語ドリル",
+   "url": "https://iryo.yogo-drill.com/",
+   "pages": 201,
+   "problems": 0,
+   "warnings": 0,
+   "items": [],
+   "more": 0
+  }
+ ]
+}
