@@ -1,0 +1,243 @@
+{
+ "checked_at": "2026-11-14T09:41:28+09:00",
+ "result_url": "https://github.com/yuki-fe/yogo-drill/blob/watch-results/watch.md",
+ "pages": 12,
+ "changes": [
+  {
+   "id": "mhlw-shinryo-r8",
+   "name": "厚生労働省 令和8年度診療報酬改定",
+   "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000188411_00074.html",
+   "sites": [
+    "iryo"
+   ],
+   "site_names": [
+    "医療事務用語ドリル"
+   ],
+   "found_at": "2026-11-14T09:41:28+09:00",
+   "added": [
+    "令和８年11月12日",
+    "厚生労働省告示第391号",
+    "PDF［446KB］",
+    "保医発1112第２号",
+    "PDF［696KB］",
+    "保医発1112第３号",
+    "PDF［456KB］",
+    "Excel［48KB］"
+   ],
+   "removed": [],
+   "added_n": 24,
+   "removed_n": 0
+  },
+  {
+   "id": "kentei-boki2",
+   "name": "商工会議所 簿記 2級",
+   "url": "https://www.kentei.ne.jp/bookkeeping/class2",
+   "sites": [
+    "boki"
+   ],
+   "site_names": [
+    "簿記用語ドリル"
+   ],
+   "found_at": "2026-11-14T09:41:28+09:00",
+   "added": [
+    "2026.11.13",
+    "第174回簿記検定試験に関するお問い合わせについて"
+   ],
+   "removed": [
+    "2026.9.25",
+    "【重要】2027年度以降の日商簿記３級試験問題の配点について"
+   ],
+   "added_n": 2,
+   "removed_n": 2
+  },
+  {
+   "id": "kentei-boki3",
+   "name": "商工会議所 簿記 3級",
+   "url": "https://www.kentei.ne.jp/bookkeeping/class3",
+   "sites": [
+    "boki"
+   ],
+   "site_names": [
+    "簿記用語ドリル"
+   ],
+   "found_at": "2026-11-14T09:41:28+09:00",
+   "added": [
+    "2026.11.13",
+    "第174回簿記検定試験に関するお問い合わせについて"
+   ],
+   "removed": [
+    "2026.9.25",
+    "【重要】2027年度以降の日商簿記３級試験問題の配点について"
+   ],
+   "added_n": 2,
+   "removed_n": 2
+  },
+  {
+   "id": "kentei-boki",
+   "name": "商工会議所 簿記",
+   "url": "https://www.kentei.ne.jp/bookkeeping",
+   "sites": [
+    "boki"
+   ],
+   "site_names": [
+    "簿記用語ドリル"
+   ],
+   "found_at": "2026-11-14T09:41:28+09:00",
+   "added": [
+    "2026.11.13",
+    "第174回簿記検定試験に関するお問い合わせについて"
+   ],
+   "removed": [
+    "【日商簿記検定試験（２級・３級）ネット試験】受験者データを掲載しました（2026年４月～６月）"
+   ],
+   "added_n": 2,
+   "removed_n": 1
+  },
+  {
+   "id": "jdla-g",
+   "name": "JDLA ジェネラリスト検定",
+   "url": "https://www.jdla.org/certificate/general/",
+   "sites": [
+    "dl"
+   ],
+   "site_names": [
+    "ディープラーニング用語ドリル"
+   ],
+   "found_at": "2026-11-14T09:41:28+09:00",
+   "added": [
+    "2026-11-13",
+    "「2027年 第1回 G検定（ジェネラリスト検定）」受験申込開始のお知らせ"
+   ],
+   "removed": [
+    "G検定（ジェネラリスト検定）2027年の年間開催スケジュールを発表"
+   ],
+   "added_n": 2,
+   "removed_n": 1
+  },
+  {
+   "id": "guga-genai",
+   "name": "生成AIパスポート（GUGA）",
+   "url": "https://guga.or.jp/generativeaiexam/",
+   "sites": [
+    "genai"
+   ],
+   "site_names": [
+    "生成AI用語ドリル"
+   ],
+   "found_at": "2026-11-12T10:47:50+09:00",
+   "added": [
+    "2027年版 生成AIパスポートを",
+    "ひとつひとつわかりやすく。",
+    "教科書&問題集"
+   ],
+   "removed": [],
+   "added_n": 3,
+   "removed_n": 0
+  },
+  {
+   "id": "jdla-g",
+   "name": "JDLA ジェネラリスト検定",
+   "url": "https://www.jdla.org/certificate/general/",
+   "sites": [
+    "dl"
+   ],
+   "site_names": [
+    "ディープラーニング用語ドリル"
+   ],
+   "found_at": "2026-11-10T11:34:20+09:00",
+   "added": [
+    "2027年1月16日(土)13:00〜14:40",
+    "2027年1月8日(金)23:59まで",
+    "2026年12月25日(金)23:59まで"
+   ],
+   "removed": [
+    "・2026年はオンライン試験(年6回)と会場試験(年3回)を実施いたします。",
+    "2026年11月6日(金)16:00〜17:40",
+    "2026年11月7日(土)13:00〜14:40",
+    "2026年9月11日(金)13:00〜",
+    "2026年10月29日(木)23:59まで",
+    "2026年10月22日(木)23:59まで"
+   ],
+   "added_n": 3,
+   "removed_n": 6
+  },
+  {
+   "id": "mhlw-shinryo-r8",
+   "name": "厚生労働省 令和8年度診療報酬改定",
+   "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000188411_00074.html",
+   "sites": [
+    "iryo"
+   ],
+   "site_names": [
+    "医療事務用語ドリル"
+   ],
+   "found_at": "2026-10-31T05:28:29+09:00",
+   "added": [
+    "令和８ 年10 月30 日",
+    "保医発10 3 0 第１ 号",
+    "PDF［319KB］",
+    "令和８年10 月30 日",
+    "PDF［166KB］",
+    "保医発1030 第２号",
+    "PDF［372KB］",
+    "PDF［74KB］"
+   ],
+   "removed": [],
+   "added_n": 8,
+   "removed_n": 0
+  },
+  {
+   "id": "ipa-syllabus-2026",
+   "name": "IPA 新試験制度のシラバスについて",
+   "url": "https://www.ipa.go.jp/shiken/syllabus/henkou/2026/20260630.html",
+   "sites": [
+    "fe",
+    "ip"
+   ],
+   "site_names": [
+    "FE用語ドリル",
+    "ITパスポート用語ドリル"
+   ],
+   "found_at": "2026-10-31T05:28:29+09:00",
+   "added": [
+    "最終更新日：2026年10月30日",
+    "プロフェッショナルデジタルスキル（データ・AI）試験（仮称） シラバス案 Ver.0.1(PDF:2.0 MB)",
+    "（2026年10月30日掲載）",
+    "2026年10月30日",
+    "プロフェッショナルデジタルスキル（データ・AI）試験（仮称）のシラバス案を掲載しました。"
+   ],
+   "removed": [
+    "最終更新日：2026年9月30日",
+    "準備が整ったものから順次このページに掲載し、2026年度夏頃を目途に一通り掲載する予定です。",
+    "準備中"
+   ],
+   "added_n": 5,
+   "removed_n": 3
+  },
+  {
+   "id": "ipa-minaoshi",
+   "name": "IPA 試験制度の見直しについて",
+   "url": "https://www.ipa.go.jp/shiken/minaoshi/index.html",
+   "sites": [
+    "fe",
+    "ip"
+   ],
+   "site_names": [
+    "FE用語ドリル",
+    "ITパスポート用語ドリル"
+   ],
+   "found_at": "2026-10-31T05:28:29+09:00",
+   "added": [
+    "（2026年6月22日掲載、2026年10月30日更新）",
+    "（2026年6月30日掲載、2026年10月30日更新）"
+   ],
+   "removed": [
+    "（2026年6月22日掲載、2026年8月31日更新）",
+    "（2026年6月30日掲載、2026年9月30日更新）"
+   ],
+   "added_n": 2,
+   "removed_n": 2
+  }
+ ],
+ "errors": []
+}
