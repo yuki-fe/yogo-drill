@@ -93,6 +93,8 @@ def page(name, title, desc, body, ld=None, noindex=False):
 </body>
 </html>
 """
+    # トップへのリンクは正規 URL（/）にそろえる（index.html のままだと検索エンジンの評価が分かれる）
+    html = html.replace(f'href="{rel}index.html', f'href="{rel or "./"}')
     (OUT / name).write_text(html, encoding="utf-8")
 
 
